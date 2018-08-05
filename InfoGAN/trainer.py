@@ -65,7 +65,7 @@ class Trainer:
         optimG = optim.Adam([{'params':self.G.parameters()}, {'params':self.Q.parameters()}],
                             lr=0.001, betas=(0.5, 0.99))
 
-        dataset = dset.MNIST('./dataset', transform=transforms.ToTensor())
+        dataset = dset.MNIST('./dataset', transform=transforms.ToTensor(), downlaod=True)
         dataloader = DataLoader(dataset, batch_size=self.batch_size, shuffle=True, num_workers=1)
 
         # fixed random variables
