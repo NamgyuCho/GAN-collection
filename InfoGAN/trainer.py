@@ -7,8 +7,8 @@ import torch.autograd as autograd
 
 import torchvision.datasets as dset
 import torchvision.transforms as transforms
-from torch.util.data import DataLoader
-from torchvision.utils import save_images
+from torch.utils.data import DataLoader
+from torchvision.utils import save_image
 
 import os
 
